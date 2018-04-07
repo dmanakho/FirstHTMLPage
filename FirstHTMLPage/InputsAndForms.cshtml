@@ -1,0 +1,83 @@
+﻿@{
+    string firstName = "";
+    string lastName = "";
+    string mychoice = "";
+
+    string[] choicesOfLife = { "study hard", "skip programming class", "stay late in bed", "get a job" };
+
+    if (IsPost)
+    {
+        firstName = Request.Form["firstName"];
+        lastName = Request.Form["lastName"];
+        int c = Convert.ToInt32(Request.Form["choice"]);
+        mychoice = choicesOfLife[c];
+    }
+
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learning Inputs and Forms</title>
+    <link href="~/Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Learning Inputs and Forms</h1>
+    </header>
+    <main>
+        <h2>Basic Input Form</h2>
+
+        <form action="~/InputsAndForms.cshtml" method="post">
+            <p>
+
+                <label for="firstName">First Name:</label>
+                <input type="text" name="firstName" id="firstName" value="@firstName" />
+            </p>
+            <p>
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" value="@lastName" />
+            </p>
+            <p>
+                <label for="choice">Make a choice</label>
+                <input type="number" min="0" max="3" name="choice" id="choice" />
+            </p>
+            <input type="button" name="button" value="Plain Button" onclick="alert('Plain Button is pressed')" />
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+
+        @if (IsPost)
+        {
+            <h4>You've entered:</h4>
+            <p>@firstName @lastName</p>
+            <p>You've chosen to @mychoice</p>
+        }
+
+
+        <h2>HTML Inputs</h2>
+
+        <p>Text Input: </p>
+        <input type="text" name="name" value="Enter your name" />
+        <p>Button</p>
+        <input type="button" name="name" value="Press me!" />
+        <p>CheckBox</p>
+        <input type="checkbox" name="name" value="test" checked="checked" />
+        <p>Radio</p>
+        <input type="radio" name="name" value="test" />
+        <p>Time</p>
+        <input type="time" name="name" value="test" />
+        <p>Submit</p>
+        <input type="submit" name="name" value="submit" />
+        <p>Color</p>
+        <input type="color" name="name" value="#ff05cd" />
+        <p>Password</p>
+        <input type="password" name="name" value="" />
+        <p>Number</p>
+        <input type="number" name="name" value="" />
+        <p>File</p>
+        <input type="file" name="name" value="" />
+
+    </main>
+    <footer>Copyright Mr. Manakhov - @DateTime.Now.Year</footer>
+
+</body>
+</html>
