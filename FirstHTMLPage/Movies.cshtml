@@ -1,0 +1,56 @@
+﻿@using FirstHTMLPage.Code
+
+@{
+    string name = "Mr. Manakhov";
+    string profession = "I'm a Web Developer";
+
+    Movie[] movies = {
+        new Movie( "Ready Player One","Steven Spielberg",2018,"Tye Sheridan"),
+        new Movie("Black Panther","Ryan Coogler",2018,"Chadwick Boseman"),
+        new Movie("Wrinkle in Time","Ava ",2018,"Reid Storm")
+    };
+
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movies</title>
+    <link href="~/Styles.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Movies that I watched so far this year</h1>
+    </header>
+    <main>
+        <h3>My name is @name</h3>
+        <h4>@profession</h4>
+        <table>
+            <caption>Movies</caption>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Release Year</th>
+                    <th>Cast</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (int i = 0; i < movies.Length; i++)
+                {
+                <tr>
+                    <td>@movies[i].Title</td>
+                    <td>@movies[i].Director</td>
+                    <td>@movies[i].ReleaseYear</td>
+                    <td>@movies[i].Cast</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        Copyright Mr. Manakhov! @DateTime.Now.Year
+    </footer>
+</body>
+</html>

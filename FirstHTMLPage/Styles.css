@@ -1,0 +1,137 @@
+﻿body {
+    background-color: lightyellow;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: darkblue;
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+    header h1 {
+        color: white;
+    }
+
+    header h2 {
+        color: white;
+    }
+
+#captions {
+    width: 60%;
+    float: left;
+}
+
+nav {
+    width: 40%;
+    float: right;
+}
+
+main {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-color: darkblue;
+    border-width: 3px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: darkblue;
+}
+
+.imgQuad {
+    float: right;
+    max-width: 400px;
+    margin: 5px;
+    box-shadow: 12px -12px 6px 0px #784545;
+}
+
+section {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 28%;
+    text-align: center;
+    padding: 4px;
+    background-color: lightblue;
+    border-radius: 10px;
+}
+
+.columns {
+    display: inline-block;
+    width: 32%;
+    vertical-align: top;
+}
+
+footer {
+    background-color: darkblue;
+    padding: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav li {
+    /*float: left;*/
+    display: inline;
+    margin-right: 13px;
+    background-color: gold;
+    color: darkblue;
+    padding: 5px;
+    box-shadow: 3px 3px 5px 1px #cccccc;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li:hover {
+    color: gold;
+    background-color: darkslateblue;
+    padding: 4px;
+    box-shadow: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+table {
+   width: 100%;
+    border: solid;
+    border-collapse:collapse;
+}
+
+td ,th {
+    border: solid;
+    border-color: #808080;
+    border-width: 5px;
+    padding: 15px;
+}
+
+thead {
+    font-family: Broadway;
+    color: rebeccapurple;
+    text-align:center;
+}
+
+tbody tr:nth-child(odd)
+{
+    background-color:azure;
+}
