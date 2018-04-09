@@ -138,9 +138,27 @@ tbody tr:nth-child(odd)
 
 form {
     border: 2px solid lightgrey;
-    background-color: lavender;
+    background-color: aliceblue;
     padding: 15px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+}
+
+.button {
+    color: pink;
+    font: 1.4em bolder;
+    background-color: black;
+    padding: 15px;
+    border-radius: 25px;
+    border-style:ridge;
+}
+
+input[type='submit'] {
+    color: pink;
+    font: 1.4em bolder;
+    background-color: black;
+    padding: 15px;
+    border-radius: 25px;
+    border-style: ridge;
 }
